@@ -6,7 +6,7 @@
 Handle any obvious errors.
 
 ## Working of app
-* User submits username(sam/gaurav/karthikeya) on login screen and gets access to login screen.
+* User submits username(sam/gaurav/karthikeya) on login screen and gets access to watson screen.
 * When user enters sample question (url or plain text), Watson API processes the request and displays appropriate           categories and score in percentage.
 * The server endpoint needs two inputs: username(sam/gaurav/karthikeya) and question. Question entered can be in any        format like text or URL. Entered question is checked for text or URL using regex. 
 * A POST request with content type as application/json is made to custom microservice  (Watson Natural 
@@ -29,7 +29,7 @@ Handle any obvious errors.
 *  git clone https://github.com/priyarg/Watson.git
 *  cd Watson
 *  npm install (to install project dependencies)
-*  open expoXde,click on open existing project and search watson
+*  open expoXde,click on open existing project and search Watson
 *  start React Native packager and open on Device connected
 
 
