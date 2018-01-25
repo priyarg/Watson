@@ -34,4 +34,5 @@ Handle any obvious errors.
 
 
 ## Expo link : https://exp.host/@priyarg/imadapprna
+* To run expo link download expo on device. click above link and send expo link to ur device or scan using expo app.
 
