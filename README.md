@@ -37,5 +37,5 @@ Handle any obvious errors.
 * To run expo link download expo on device. click above link and send expo link to your device or scan using expo app.
 
 ## Apk link : https://drive.google.com/file/d/1D6DpyUeDVZF9mDfIrMMRpIgpWoCo6fXx/view?usp=sharing
-* Download apk on device. Download expo. Open the link on device
+* Download apk on device.  Open the link on device.
 
