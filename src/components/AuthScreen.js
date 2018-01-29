@@ -11,11 +11,9 @@ export default class AuthScreen extends React.Component {
     super(props);
     this.state = {
       isLoggedIn: false,
-      usernameTextBox: '',
-      //	passwordTextBox : '',
+      usernameTextBox: '',      
       loading: true,
-      isLoading: false,
-      //visible: false, 
+      isLoading: false,     
       fontsAreLoaded: false,
     }
   }
@@ -45,7 +43,7 @@ export default class AuthScreen extends React.Component {
         loading: false
       });
 
-      // loading: false;  
+       
       console.log("check response------------------" + respUser.status);
       if (respUser.status !== 200) {
         if (respUser.status === 504) {
@@ -57,13 +55,11 @@ export default class AuthScreen extends React.Component {
         console.log("json respons......: " + respUser);
         let parsedObj = JSON.parse(respUser._bodyInit);
         console.log("parsedObj......: " + parsedObj);
-        var users = [];
-        // arr.forEach(function (categories) { //code for checking higher level parsed object
+        var users = [];      
         parsedObj.forEach(function (user) {
           users.push(user.user_hash);
         });
-        //}
-        //);
+        
         console.log("Display users......: " + users.toString());
         let username = this.state.usernameTextBox;
         // check if entered input is present in users array
@@ -80,41 +76,14 @@ export default class AuthScreen extends React.Component {
         }
       }
     }
-  }
-
-  /*handleSignupPressed = async () => {
-    let resp = await trySignup(this.state.usernameTextBox, this.state.passwordTextBox);
-    if(resp.status !== 200){
-      if (resp.status === 504) {
-        Alert.alert("Network Error", "Check your internet connection" )
-      } else {
-        Alert.alert("Error", "Password too short / User already exists")      
-      }
-    } else {
-      this.setState({isLoggedIn:true})  
-    }
-  }*/
+  } 
 
   handleUsernameChange = usernameTextBox => {
     this.setState({
       ...this.state,
       usernameTextBox: usernameTextBox
     })
-  }
-
-  /*handlePasswordChange = passwordTextBox => {
-  	this.setState({
-  		...this.state,
-  		passwordTextBox: passwordTextBox
-  	})
-  }
-
-  handleLogout = () => {
-    this.setState({
-      ...this.state,
-      isLoggedIn: false
-    })
-  }*/
+  } 
 
   render() {
     if (this.state.fontsAreLoaded == true) {
@@ -139,17 +108,8 @@ export default class AuthScreen extends React.Component {
               <Item floatingLabel>
                 <Label>Username</Label>
                 <Input value={this.state.usernameTextBox} onChangeText={this.handleUsernameChange} />
-              </Item>
-              {/*  
-              <Item floatingLabel>
-                <Label>Password</Label>
-                <Input value={this.state.passwordTextbox} onChangeText={this.handlePasswordChange} secureTextEntry/>
-              </Item>*/}
-            </Form>
-            {/* <View style = {{height:10}} />
-            <Button block onPress={this.handleSignupPressed} >
-              <Text> Sign up </Text>
-            </Button>*/}
+              </Item>              
+            </Form>       
             <View style={{ height: 10 }} />
             {
               this.state.isLoading ?
